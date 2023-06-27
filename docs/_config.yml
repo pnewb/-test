@@ -24,8 +24,11 @@ description: >- # this means to ignore newlines until "baseurl:"
   An attempt at setting some reasonable reference points for determining relative
   flow rates of popular hotends and nozzles.
 baseurl: "/flow-rate-testing" # the subpath of your site, e.g. /blog
-url: "https://pnweb.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://pnweb.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  pnewb
+website: "https://pnewb.github.io"
+basewebsite: "/flow-rate-testing"
+
 
 # Build settings
 theme: minima
