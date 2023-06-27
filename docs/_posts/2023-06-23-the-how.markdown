@@ -1,0 +1,26 @@
+---
+permalink: /thehow.html
+title: And how are you going about this, exactly?
+layout: post
+---
+
+# The Test Rig
+I've picked these parts because I have them sitting around, and I think they represent a resonable set of gear.  Not because I'm endorsing anything specific, or because I think any of these things are "the best" in their particular class.
+
+* Voron Switchwire
+* LGX Lite extruder
+* 20mm LDO 10T motor
+* Stealthburner toolhead
+* No part cooling fan
+* Some generic 40mm hotend fan
+* Zyltech black ABS (5kg spool, which will hopefully see me through the whole suite of stuff to test)
+
+The ABS is being spooled onto a 1kg roll and held over the top in standard Switchwire/Ender 3 mount style.  It's not perfect, it does impart some resistance to extrusion, and there will be less resistance as the spool gets lighter.  But also...it's the best I've got, and it's pretty minimal.  The printer is in a closet in the middle of my house, and the ambient temps are somewhat consistent (about 25C).  I tend to be running flow tests while I'm not running any other prints. There may be some tests to see how much, if any, ambient temp affects this.  I believe that it won't be enough to really affect the useful outcome of the data...but also I should test this otherwise what's the point.  Fine.  I'll do that next, you've convinced me.
+
+# The Method
+As I mentioned in [the what and why]({% post_url 2023-06-23-the-whatwhy %}) I think that CNC Kitchen had a [really solid plan](https://www.cnckitchen.com/blog/extrusion-system-benchmark-tool-for-fast-prints) to use as a foundation.  And then iFallUpHill had a [very nice online implementation](https://github.com/iFallUpHill/flow-calculator) that meant I didn't have to mess with Excel.  I've doubled the default output from 200mm to 400mm because that puts me right on the edge of getting 1g of theoretical 'perfect' output, and that seemed nice.  Also because I have a [scale](https://acaia.co/products/lunar_2021) that gets me 10ths of a gram, but not all the way down to milligram, which for our purposes seems to be fine.  That scale also has bluetoothLE output, allowing me to let the script record the weight, instead of manual input, and risking fat fingering things.
+
+# The Grind
+We're naming all of our files in a way that allows the script to parse out the start and end temperatures, start and end flow rates, and each increment of those.  So for example I'm running `10_2_5_230_10_4.gcode` for almost every test for the v6 hotend with a 40w heater and the crappiest aluminum block I could find.  This starts at `10`mm^3/s and `230`C, and tries `2`mm^3/s increments `5` times before stepping up by `10`C 4 times.  Capping that test out at 18mm^3/s and 260C.  (As an aside, I'm starting with the crappiest crap I was willing to source because it's more fun to see big numbers later, than to watch everything slowly turn to trash as you test the fun stuff first, and then go try out your junk heap parts)
+
+Each execution is generating a very very basic graph, as well as a csv file.  And all the data's being loaded into a sqlite3 db for more advanced parsing out.  Hopefully as time goes on and I get some assistance from those more interested and skilled in making things pretty...things will get more pretty.
