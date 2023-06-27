@@ -12,7 +12,7 @@ The E3D v6 was the baseline of "this is a pretty good hotend" when I got into pr
 That gets us our very first actual graphs and numbers:
 The cheapest no-name 0.4 brass (probably?) nozzle that was again, sitting around in a random drawer.
 
-[![v6_brass_0.4_40w_230C-260C_10-18.png](assets/img/v6_brass_0.4_40w_230C-260C_10-18.png)](assets/csv/v6_brass_0.4_40w_10-18_230-260.csv)
+[![v6_brass_0.4_40w_230C-260C_10-18.png]({{site.baseurl}}/assets/img/v6_brass_0.4_40w_230C-260C_10-18.png)]({{site.baseurl}}/assets/csv/v6_brass_0.4_40w_10-18_230-260.csv)
 
 Looks about like what we'd expect, which is nice.  230 isn't _really_ hot enough for extruding ABS, and things start falling off pretty hard past 14mm^3/s, regardless of the higher temperatures.  
 <br>
@@ -21,4 +21,4 @@ Looks about like what we'd expect, which is nice.  230 isn't _really_ hot enough
 # Baby's First Tungsten Carbide
 The other 0.4 I had on hand was a tungsten carbide nozzle from a discord user who was selling them off back before real full TC nozzles were seemingly on every street corner.  This one holds out a _little_ better, but realistically the same flow rate limits are still applicable. Upwards of 14mm^3/s you're pretty much out of luck.  Not surprising since there isn't any custom internal geometry.
 
-[![v6_brumpo_0.4_40w_230C-260C_10-18.png](assets/img/v6_brumpo_0.4_40w_230C-260C_10-18.png)](assets/csv/v6_brumpo_0.4_40w_10-18_230-260.csv)
+[![v6_brumpo_0.4_40w_230C-260C_10-18.png]({{site.baseurl}}/assets/img/v6_brumpo_0.4_40w_230C-260C_10-18.png)]({{site.baseurl}}/assets/csv/v6_brumpo_0.4_40w_10-18_230-260.csv)

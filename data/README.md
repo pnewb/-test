@@ -1,0 +1,1 @@
+I'm just lazy, and didn't feel like making full links to the raw.github locations for all the CSV data with links on the pages site.  And the symlink should work just fine for anyone actually checking out the repo, but really nobody is likely to want more than the sqlite db.
